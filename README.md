@@ -44,7 +44,11 @@ Non-negative mod `n` (as input):
 
     (f=>f(f))(ff=>f1=>f=>f1>f-1?ff(ff)(f1-f)(f):f1)
 
-Multiplication:
+Non-negative integer division:
+
+    (f=>f(f))(ff=>f1=>f=>f1>f-1?1+ff(ff)(f1-f)(f):1-1)
+
+Non-negative multiplication:
 
     (f=>f(f))(ff=>f=>f1=>--f1?ff(ff)(f)(f1)-(-f):f)
 
