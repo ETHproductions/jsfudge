@@ -1,13 +1,13 @@
-# JSLambda
+# JSFudge
 A mathematical, possibly Turing-complete subset of JavaScript.
 
 ## The subset
-Only a 8 characters are freely allowed in JSLambda: `()?:f1->`
+Only a 8 characters are freely allowed in JSFudge: `()?:f1->`
 
 In addition, the arrow function "keyword" `=>` is allowed (note that `=` is only allowed as a part of `=>`).
 
 ## How it works
-At the heart of JSLambda is the self-application function:
+At the heart of JSFudge is the self-application function:
 
     f=>f(f)
 
@@ -24,7 +24,7 @@ The main function `f=>n=>n>1?f(f)(n-1-1):n` accepts a function and a number. It 
 ## Turing-completeness
 I believe it can be shown that any (integer, integer, ...) -> integer function (with a fixed number of inputs) can be implemented with this subset, although I haven't yet taken the time to do this. However, in order to be Turing-complete, a language must have a way to manipulate arbitrary amounts of memory, if given adequate hardware. Arbitrary output could be achieved with the addition of a function that takes a char-code and prints it to STDOUT, but I am unsure if there is an adequate technique for taking an arbitrary input.
 
-If/when the [BigInt proposal](https://github.com/tc39/proposal-bigint) is passed and officially becomes a part of JavaScript, it would easily be possible to represent any string of bytes by converting it from base-256 into a huge integer, thus fulfilling the requirement for theoretically infinite memory. But until this happens, JSLambda may not be Turing-complete.
+If/when the [BigInt proposal](https://github.com/tc39/proposal-bigint) is passed and officially becomes a part of JavaScript, it would easily be possible to represent any string of bytes by converting it from base-256 into a huge integer, thus fulfilling the requirement for theoretically infinite memory. But until this happens, JSFudge may not be Turing-complete.
 
 ## Examples
 
